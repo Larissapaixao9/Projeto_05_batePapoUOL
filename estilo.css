@@ -1,6 +1,8 @@
 body{
     background-color: #E5E5E5;
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
 }
 .topo{
     background-color: white;
@@ -8,7 +10,10 @@ body{
     justify-content: space-between;
     height: 80px;
     width: 100%;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
+    position: fixed;
+    top:0;
+    left: 0;
 }
 .logo, .msn-icone{
     padding: 20px;
@@ -18,7 +23,13 @@ body{
     padding: 10px;
     margin-bottom: 5px;
     margin-top: 5px;
+    word-wrap: break-word;
     
+}
+.tela_cadastro{
+    width: 100%;
+    border: 3px solid black;
+    margin: 0 auto;
 }
 
 .cinza{
@@ -64,4 +75,9 @@ body{
 }
 .escondido{
     display: none;
+}
+input{
+    border: none;
+    width: 80vw;
+    outline: none;
 }

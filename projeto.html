@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="estilo.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body onload="entrar_sala()">
+
 
 
     <div class="topo">
@@ -29,10 +30,10 @@
 
 <div class="espaco">
     </div>
-    <div class="espaco">
+    
     <div class="rodape">
         <div class="mensagem">
-            <input type="text" />
+            <input type="text" autofocus placeholder="Escreva aqui" required/>
         </div>
 
         <div class="aviao-icone" onclick="enviar_mensagem()">
@@ -40,6 +41,7 @@
         </div>
     </div>
 
+</div>
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
