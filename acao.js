@@ -24,7 +24,7 @@ function entrar_sala(){
     }
 //entrar_sala();
 
-function continuar_verficando(){
+function continuar_verificando(){
     rUser=axios.post(url3,User);
     rUser.then((response)=>{
         
@@ -47,9 +47,12 @@ carregarUsuarios()
 
 function renderizarChat(response){
     console.log(response)
+    const containerMensagem=document.querySelector(".container")
+    containerMensagem.innerHTML='';
+    
     for(let i=0;i<response.data.length;i++){
     const m=response.data[i]
-    const containerMensagem=document.querySelector(".container")
+    
     if(response.data[i].text=="entra na sala..." && response.data[i].type=="status"){
         
         containerMensagem.innerHTML+=`<div class="mensagem cinza">${response.data[i].time} <b>${response.data[i].from}</b> ${response.data[i].text}</div>`
@@ -72,6 +75,7 @@ function renderizarChat(response){
         containerMensagem.innerHTML+="";
     }
     }
+    
     let mensagemFinal=document.querySelector(".container")
 
     mensagemFinal.lastChild.scrollIntoView()
