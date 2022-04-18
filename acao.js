@@ -59,7 +59,7 @@ function renderizarChat(response){
         containerMensagem.innerHTML+=`<div class="mensagem cinza">${response.data[i].time} <b>${response.data[i].from}</b> ${response.data[i].text}</div>`
     }
     if(response.data[i].type=="message" && response.data[i].to=="Todos"){
-        //containerMensagem.innerHTML+=`<div class="mensagem white">${response.data[i].time}<b>${response.data[i].from} </b><span> para <b>todos</b>:</span> ${response.data[i].text}</div>` 
+         
         containerMensagem.innerHTML+=`<div class="mensagem white">${response.data[i].time}  <b>${response.data[i].from} </b><span> para <b>todos</b>:</span> ${response.data[i].text}</div> `
     }
     if(response.data[i].type=="message" && response.data[i].to!="Todos"){
@@ -73,7 +73,9 @@ function renderizarChat(response){
     }
     }
     let mensagemFinal=document.querySelector(".container")
-    mensagemFinal[mensagemFinal.length-1].scrollIntoView()
+
+    mensagemFinal.lastChild.scrollIntoView()
+    
     
 }
 setInterval(()=>{
